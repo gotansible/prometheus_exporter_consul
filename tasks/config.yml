@@ -1,0 +1,11 @@
+---
+- name: config - log dir
+  file:
+    state=directory
+    path={{ item }}
+    owner={{prometheus_consul_user}}
+    group={{prometheus_consul_group}}
+    mode=0644
+  with_items:
+    - prometheus_consul_log_dir
+

@@ -1,0 +1,17 @@
+---
+# defaults file for prometheus_consul
+
+prometheus_consul_build_folder: /tmp/prometheus_consul
+prometheus_consul_user: prometheus_consul
+prometheus_consul_group: prometheus_consul
+prometheus_consul_service_name: prometheus_consul
+prometheus_consul_repo: "https://github.com/prometheus/consul_exporter"
+prometheus_consul_go_version: 1.4.2
+prometheus_consul_install_dir: /opt/prometheus_consul
+prometheus_consul_conf_dir: /etc/prometheus_consul
+prometheus_consul_log_dir: /var/log/prometheus_consul
+prometheus_consul_repo_version: master
+# config
+
+prometheus_consul_listen_address: ":11201"
+prometheus_consul_args: '-consul.server="localhost:8500" -web.listen-address=":21002"'

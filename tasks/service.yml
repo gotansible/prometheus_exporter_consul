@@ -1,0 +1,11 @@
+---
+- name: setup haproxy exporter as runit service and start it
+  runit:
+    name: "{{ prometheus_consul_service_name }}"
+    enabled: true
+    state: start
+    timeout: 9
+    user: "{{ prometheus_consul_user }}"
+    command: "{{ prometheus_consul_install_dir }}/consul_exporter {{ prometheus_consul_args }}"
+  register: prometheus_consul_service_status
+
